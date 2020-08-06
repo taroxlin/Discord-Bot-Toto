@@ -1,6 +1,5 @@
   
 const ytdlDiscord = require("ytdl-core-discord");
-const {getTitleVideo} = require('../dev-functions/getVideo.info')
 
 function isValidUrl(string) {
     try {

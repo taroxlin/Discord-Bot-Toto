@@ -25,29 +25,31 @@ module.exports = (client)=>{
             }
         }
         log(table.toString(),'magenta')
-
-
+        
+        
         // On Message Event
         client.on('message', async message => {
             //Check the prefix and real user and its not private
-                const {guild, client} = message
-                const {settings} = client
-                let prefix = defaultPrefix
-                if(!!guild && !!settings.get(guild.id).prefix){
-                    prefix = settings.get(guild.id).prefix
+            const {guild, client} = message
+            const {settings} = client
+            if(message.author.bot) return
+            
+            let prefix = defaultPrefix
 
-                }
+              if(!!guild && settings.get(guild.id)){
+                  if(settings.get(guild.id).prefix) prefix = settings.get(guild.id).prefix
+                 }
                 client.prefix = prefix
-
-            if (message.author.bot || !message.content.startsWith(client.prefix)) return;
-            
-            // Slice input for command + args
-            const args = message.content.slice(client.prefix.length).trim().split(/ +/g);
-            const commandName = args.shift().toLowerCase();
-            
-            //Look up for raw command or its aliases
-            const command = 
-            client.commands.get(commandName) ||
+            if (!message.content.startsWith(client.prefix)) return;
+                
+                
+                // Slice input for command + args
+                const args = message.content.slice(client.prefix.length).trim().split(/ +/g);
+                const commandName = args.shift().toLowerCase();
+                
+                //Look up for raw command or its aliases
+                const command = 
+                client.commands.get(commandName) ||
             client.commands.find( cmd => cmd.aliases && cmd.aliases.includes(commandName))
             
             //Respond if command is not founded

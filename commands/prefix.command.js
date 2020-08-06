@@ -15,7 +15,6 @@ module.exports = {
         if(!settings.get(guild.id)){
             settings.set(guild.id,{})
         }
-        console.log(args[0] === defaultPrefix)
         if(args[0] === defaultPrefix){
             delete settings.get(guild.id).prefix
             client.prefix = defaultPrefix

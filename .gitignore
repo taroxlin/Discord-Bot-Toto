@@ -13,7 +13,7 @@
 
 # misc
 /commands/check.js
-/config/servers/*
+/config/servers/
 /config/config.js
 .DS_Store
 .env.local
