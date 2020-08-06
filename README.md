@@ -4,18 +4,19 @@ To To Bot is a discord bot made with [DISCORD.JS](https://github.com/discordjs/d
 
 Features 0.1:
 
-  - Commands [aliases]
-    --addchannel
-    --clear
-    --deletechannel
-    --die [d,dice]
-    --help
-    --info
-    --play
-    --prefix
-    --queue
-    --skip
-    --stop
+  Commands [aliases]
+    
+    addchannel
+    clear
+    deletechannel
+    die [d,dice]
+    help
+    info
+    play
+    prefix
+    queue
+    skip
+    stop
  
 
 ### Installation
