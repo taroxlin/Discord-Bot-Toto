@@ -2,6 +2,7 @@ module.exports = {
     name: 'queueclear',
     description: 'Clear music queue',
     guildOnly:true,
+    exclusiveChannel:true,
     aliases :[],
     run(msg){
         const {client,guild} = msg

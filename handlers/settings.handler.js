@@ -7,6 +7,7 @@ const serverConfigPath = "/config/servers"
 
 module.exports = ( client ) =>{
 client.settings = new Collection()
+
 const settingsFiles = readdirSync(__dirname + `/..${serverConfigPath}`).filter(file => file.endsWith(".yaml"))
 
 try {

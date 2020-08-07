@@ -11,10 +11,16 @@
 # production
 /build
 
-# misc
-/commands/check.js
-/config/servers/
+#Dev files
+/examples
 /config/config.js
+/config/servers/*
+/commands/*.js
+!/commands/temlpate.js
+!/commands/*.command.js
+/dev-functions/check.object.js
+# misc
+.yawl
 .DS_Store
 .env.local
 .env.development.local

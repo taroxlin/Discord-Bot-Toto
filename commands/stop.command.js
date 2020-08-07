@@ -3,6 +3,7 @@ module.exports = {
     description: 'Delete whole playlist and leave the channel',
     args:false,
     guildOnly:true,
+    exclusiveChannel:true,
     aliases :['leave'],
     run(msg){
         const {client, guild} = msg
